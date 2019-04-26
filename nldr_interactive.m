@@ -57,7 +57,7 @@ function nldr_interactive_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to nldr_interactive (see VARARGIN)
 
 % Add current dir and sub dir to PATH
-addpath(genpath(pwd));
+addpath(genpath(pwd));rmpath(genpath([pwd '\.git']));
 
 % Choose default command line output for nldr_interactive
 handles.output = hObject;
@@ -94,6 +94,11 @@ handles.data=load(handles.fname);
 N=size(handles.data.data,1);
 handles.cmap=jet(N);
 plot_original(handles);
+if ~isfield(handles.data,'NN')
+    handles.data.NN=6;
+end
+handles.edit_KNN.String=handles.data.NN;
+handles.nn=handles.data.NN;
 guidata(hObject,handles);
 
 function listbox_FILE_CreateFcn(hObject, eventdata, handles)
