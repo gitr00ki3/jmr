@@ -1,9 +1,8 @@
-# Regularization on rapidly varying manifold
-A higher order Third derivative(Jerk) baseed regularization technique has been proposed that expolits the information resides on the inflection points of the manifold which vanishes when computed with second order based regularization techniuque.
+# Regularization on Rapidly Varying Manifold
+A higher order Third derivative(Jerk) based regularization technique has been proposed that exploits the information resides on the inflection points of the manifold which vanishes when computed with second order based regularization techniques.
 
-## The second order based manifold regularization techniques(Laplacian and Hessian) vanishes on the point of inflection. To take into account these data points on manifold, the third order (Jerk) based regularization has been proposed which can acommadate the information laying on these points. 
-The following theorm explains the third order comptation on infection   
-<img src="0001.png" width=1000></img>
+## The second order based manifold regularization techniques(Laplacian and Hessian) vanishes on the point of inflection. To take into account these data points on the manifold, the third order (Jerk) based regularization has been proposed which can accommodate the information laying on these points. The following theorem explains the third order computation on inflection:
+<img src="0001.png"></img>
 
 ## How to use?
 Run **nldr_interactive.m** file to open the interactive window. 
